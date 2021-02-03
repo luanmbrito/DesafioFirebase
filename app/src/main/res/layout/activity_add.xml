@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AddActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fabAddPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:elevation="2dp"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        app:layout_anchor="@+id/cvAddContainer"
+        app:layout_anchorGravity="top|center"
+        app:layout_constraintBottom_toTopOf="@id/cvAddContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        android:background="@android:drawable/ic_menu_camera"
+        app:strokeWidth="10dp" />
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_anchor="@+id/cvAddContainer"
+        app:layout_anchorGravity="top|center"
+        app:layout_constraintBottom_toTopOf="@id/cvAddContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_photo_24" /> -->
+
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvAddContainer"
+        android:elevation="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="1dp"
+        android:layout_margin="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="91dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                app:boxBackgroundColor="@color/white"
+                android:hint="Nome">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tieAddName"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                app:boxBackgroundColor="@color/white"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                android:hint="Data Lançamento">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tieAddDate"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="13dp"
+                app:boxBackgroundColor="@color/white"
+                android:hint="Descrição">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="116dp"
+                    android:id="@+id/tieAddDescription"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Buttons -->
+                <Button
+                    android:id="@+id/btnAddSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="73dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="19dp"
+                    android:backgroundTint="#FF5252"
+                    android:layout_marginBottom="16dp"
+                    android:text="Salvar Jogo"/>
+
+            </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
