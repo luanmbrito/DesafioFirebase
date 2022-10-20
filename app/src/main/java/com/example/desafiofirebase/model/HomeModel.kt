@@ -11,4 +11,5 @@ data class HomeModel(
     public var date:String?,
     public var descricao: String?,
     public var user: String?,
+    public var age: Number?,
 ) : Parcelable
